@@ -182,109 +182,146 @@ export const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300">Cutting-edge tools and frameworks for modern solutions</p>
           </div>
           
-          <div className="glass rounded-2xl p-6 sm:p-8 border border-gray-600 overflow-hidden">
-            <div className="relative">
-              {/* Animated scrolling tech stack */}
-              <div className="flex animate-scroll space-x-8 whitespace-nowrap">
-                {[
-                  // Frontend Technologies
-                  'React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'Svelte', 'TypeScript', 'JavaScript',
-                  'HTML5', 'CSS3', 'Sass', 'Tailwind CSS', 'Bootstrap', 'Material-UI', 'Chakra UI',
-                  
-                  // Backend Technologies
-                  'Node.js', 'Express.js', 'Python', 'Django', 'Flask', 'FastAPI', 'Java', 'Spring Boot',
-                  'C#', '.NET', 'PHP', 'Laravel', 'Ruby', 'Ruby on Rails', 'Go', 'Rust',
-                  
-                  // Mobile Development
-                  'React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic', 'Cordova',
-                  
-                  // Databases
-                  'MongoDB', 'PostgreSQL', 'MySQL', 'SQLite', 'Redis', 'Elasticsearch', 'Firebase',
-                  'Supabase', 'DynamoDB', 'Cassandra', 'Neo4j',
-                  
-                  // Cloud & DevOps
-                  'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitLab CI',
-                  'GitHub Actions', 'Terraform', 'Ansible', 'Nginx', 'Apache',
-                  
-                  // AI/ML & Data Science
-                  'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
-                  'Jupyter', 'Apache Spark', 'Hadoop', 'Tableau', 'Power BI',
-                  
-                  // Blockchain & Web3
-                  'Solidity', 'Web3.js', 'Ethereum', 'Hardhat', 'Truffle', 'Metamask', 'IPFS',
-                  
-                  // Testing & Quality
-                  'Jest', 'Cypress', 'Selenium', 'Postman', 'SonarQube', 'ESLint', 'Prettier',
-                  
-                  // Version Control & Collaboration
-                  'Git', 'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Confluence', 'Slack', 'Discord',
-                  
-                  // Design & Prototyping
-                  'Figma', 'Adobe XD', 'Sketch', 'InVision', 'Canva', 'Photoshop', 'Illustrator'
-                ].map((tech, index) => (
-                  <div
-                    key={index}
-                    className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-3 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                  >
-                    <span className="text-gray-200 font-medium text-sm">{tech}</span>
-                  </div>
-                ))}
+          {/* 3-Column Grid with Animated Tech Stacks */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Frontend Technologies Column */}
+            <div className="glass rounded-2xl p-6 border border-gray-600 overflow-hidden">
+              <h3 className="text-lg font-bold text-white mb-4 text-center">Frontend & UI</h3>
+              <div className="relative">
+                <div className="flex flex-col animate-scroll space-y-3">
+                  {[
+                    'React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'Svelte', 'TypeScript', 'JavaScript',
+                    'HTML5', 'CSS3', 'Sass', 'Tailwind CSS', 'Bootstrap', 'Material-UI', 'Chakra UI',
+                    'Styled Components', 'Emotion', 'Framer Motion', 'GSAP', 'Three.js', 'D3.js',
+                    'Webpack', 'Vite', 'Parcel', 'Rollup', 'ESLint', 'Prettier', 'Storybook'
+                  ].map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Duplicate for seamless loop */}
+                <div className="flex flex-col animate-scroll-duplicate space-y-3">
+                  {[
+                    'React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'Svelte', 'TypeScript', 'JavaScript',
+                    'HTML5', 'CSS3', 'Sass', 'Tailwind CSS', 'Bootstrap', 'Material-UI', 'Chakra UI',
+                    'Styled Components', 'Emotion', 'Framer Motion', 'GSAP', 'Three.js', 'D3.js',
+                    'Webpack', 'Vite', 'Parcel', 'Rollup', 'ESLint', 'Prettier', 'Storybook'
+                  ].map((tech, index) => (
+                    <div
+                      key={`frontend-duplicate-${index}`}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Gradient overlays */}
+                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-gray-900 to-transparent pointer-events-none z-10"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none z-10"></div>
               </div>
-              
-              {/* Duplicate for seamless loop */}
-              <div className="flex animate-scroll-duplicate space-x-8 whitespace-nowrap">
-                {[
-                  // Frontend Technologies
-                  'React', 'Vue.js', 'Angular', 'Next.js', 'Nuxt.js', 'Svelte', 'TypeScript', 'JavaScript',
-                  'HTML5', 'CSS3', 'Sass', 'Tailwind CSS', 'Bootstrap', 'Material-UI', 'Chakra UI',
-                  
-                  // Backend Technologies
-                  'Node.js', 'Express.js', 'Python', 'Django', 'Flask', 'FastAPI', 'Java', 'Spring Boot',
-                  'C#', '.NET', 'PHP', 'Laravel', 'Ruby', 'Ruby on Rails', 'Go', 'Rust',
-                  
-                  // Mobile Development
-                  'React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic', 'Cordova',
-                  
-                  // Databases
-                  'MongoDB', 'PostgreSQL', 'MySQL', 'SQLite', 'Redis', 'Elasticsearch', 'Firebase',
-                  'Supabase', 'DynamoDB', 'Cassandra', 'Neo4j',
-                  
-                  // Cloud & DevOps
-                  'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitLab CI',
-                  'GitHub Actions', 'Terraform', 'Ansible', 'Nginx', 'Apache',
-                  
-                  // AI/ML & Data Science
-                  'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
-                  'Jupyter', 'Apache Spark', 'Hadoop', 'Tableau', 'Power BI',
-                  
-                  // Blockchain & Web3
-                  'Solidity', 'Web3.js', 'Ethereum', 'Hardhat', 'Truffle', 'Metamask', 'IPFS',
-                  
-                  // Testing & Quality
-                  'Jest', 'Cypress', 'Selenium', 'Postman', 'SonarQube', 'ESLint', 'Prettier',
-                  
-                  // Version Control & Collaboration
-                  'Git', 'GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Confluence', 'Slack', 'Discord',
-                  
-                  // Design & Prototyping
-                  'Figma', 'Adobe XD', 'Sketch', 'InVision', 'Canva', 'Photoshop', 'Illustrator'
-                ].map((tech, index) => (
-                  <div
-                    key={`duplicate-${index}`}
-                    className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-3 transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                  >
-                    <span className="text-gray-200 font-medium text-sm">{tech}</span>
-                  </div>
-                ))}
-              </div>
-              
-              {/* Gradient overlays for smooth fade effect */}
-              <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none z-10"></div>
-              <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-900 to-transparent pointer-events-none z-10"></div>
             </div>
-          </div>
+
+            {/* Backend & Cloud Column */}
+            <div className="glass rounded-2xl p-6 border border-gray-600 overflow-hidden">
+              <h3 className="text-lg font-bold text-white mb-4 text-center">Backend & Cloud</h3>
+              <div className="relative">
+                <div className="flex flex-col animate-scroll space-y-3" style={{ animationDelay: '10s' }}>
+                  {[
+                    'Node.js', 'Express.js', 'Python', 'Django', 'Flask', 'FastAPI', 'Java', 'Spring Boot',
+                    'C#', '.NET', 'PHP', 'Laravel', 'Ruby', 'Ruby on Rails', 'Go', 'Rust',
+                    'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitLab CI',
+                    'GitHub Actions', 'Terraform', 'Ansible', 'Nginx', 'Apache', 'Redis', 'RabbitMQ',
+                    'GraphQL', 'REST API', 'gRPC', 'Microservices', 'Serverless', 'Lambda'
+                  ].map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Duplicate for seamless loop */}
+                <div className="flex flex-col animate-scroll-duplicate space-y-3" style={{ animationDelay: '10s' }}>
+                  {[
+                    'Node.js', 'Express.js', 'Python', 'Django', 'Flask', 'FastAPI', 'Java', 'Spring Boot',
+                    'C#', '.NET', 'PHP', 'Laravel', 'Ruby', 'Ruby on Rails', 'Go', 'Rust',
+                    'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes', 'Jenkins', 'GitLab CI',
+                    'GitHub Actions', 'Terraform', 'Ansible', 'Nginx', 'Apache', 'Redis', 'RabbitMQ',
+                    'GraphQL', 'REST API', 'gRPC', 'Microservices', 'Serverless', 'Lambda'
+                  ].map((tech, index) => (
+                    <div
+                      key={`backend-duplicate-${index}`}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Gradient overlays */}
+                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-gray-900 to-transparent pointer-events-none z-10"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none z-10"></div>
+              </div>
+            </div>
         </section>
 
+            {/* Mobile, AI/ML & Specialized Column */}
+            <div className="glass rounded-2xl p-6 border border-gray-600 overflow-hidden">
+              <h3 className="text-lg font-bold text-white mb-4 text-center">Mobile & AI/ML</h3>
+              <div className="relative">
+                <div className="flex flex-col animate-scroll space-y-3" style={{ animationDelay: '20s' }}>
+                  {[
+                    'React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic', 'Cordova',
+                    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
+                    'Jupyter', 'Apache Spark', 'Hadoop', 'Tableau', 'Power BI', 'MongoDB', 'PostgreSQL',
+                    'MySQL', 'SQLite', 'Elasticsearch', 'Firebase', 'Supabase', 'DynamoDB', 'Cassandra',
+                    'Solidity', 'Web3.js', 'Ethereum', 'Hardhat', 'Truffle', 'Metamask', 'IPFS',
+                    'Jest', 'Cypress', 'Selenium', 'Postman', 'SonarQube', 'Git', 'GitHub',
+                    'Figma', 'Adobe XD', 'Sketch', 'InVision', 'Canva', 'Photoshop', 'Illustrator'
+                  ].map((tech, index) => (
+                    <div
+                      key={index}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Duplicate for seamless loop */}
+                <div className="flex flex-col animate-scroll-duplicate space-y-3" style={{ animationDelay: '20s' }}>
+                  {[
+                    'React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin', 'Ionic', 'Cordova',
+                    'TensorFlow', 'PyTorch', 'Scikit-learn', 'Pandas', 'NumPy', 'OpenCV', 'Keras',
+                    'Jupyter', 'Apache Spark', 'Hadoop', 'Tableau', 'Power BI', 'MongoDB', 'PostgreSQL',
+                    'MySQL', 'SQLite', 'Elasticsearch', 'Firebase', 'Supabase', 'DynamoDB', 'Cassandra',
+                    'Solidity', 'Web3.js', 'Ethereum', 'Hardhat', 'Truffle', 'Metamask', 'IPFS',
+                    'Jest', 'Cypress', 'Selenium', 'Postman', 'SonarQube', 'Git', 'GitHub',
+                    'Figma', 'Adobe XD', 'Sketch', 'InVision', 'Canva', 'Photoshop', 'Illustrator'
+                  ].map((tech, index) => (
+                    <div
+                      key={`mobile-duplicate-${index}`}
+                      className="flex-shrink-0 bg-gray-800 hover:bg-gray-700 border border-gray-600 hover:border-gray-500 rounded-lg px-4 py-2 transition-all duration-300 transform hover:scale-105 cursor-pointer text-center"
+                    >
+                      <span className="text-gray-200 font-medium text-sm">{tech}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                {/* Gradient overlays */}
+                <div className="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-gray-900 to-transparent pointer-events-none z-10"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none z-10"></div>
+              </div>
+            </div>
+          </div>
         {/* CTA Section */}
         <section className="text-center">
           <div className="glass rounded-2xl p-8 sm:p-12 border border-gray-600">
