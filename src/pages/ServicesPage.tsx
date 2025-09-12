@@ -271,7 +271,6 @@ export const ServicesPage: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-900 to-transparent pointer-events-none z-10"></div>
               </div>
             </div>
-        </section>
 
             {/* Mobile, AI/ML & Specialized Column */}
             <div className="glass rounded-2xl p-6 border border-gray-600 overflow-hidden">
