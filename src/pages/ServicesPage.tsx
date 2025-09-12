@@ -321,6 +321,8 @@ export const ServicesPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </section>
+
         {/* CTA Section */}
         <section className="text-center">
           <div className="glass rounded-2xl p-8 sm:p-12 border border-gray-600">
